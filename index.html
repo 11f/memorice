@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Memorice</title>
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="welcome" class="welcome">
+      <h1>M E M O R I C E</h1>
+      <div class="welcome-buttons">
+        <button id="normal-game">Por los puntos</button>
+        <button id="relax-game">Tranca</button>
+      </div>
+    </div>
+    <header>
+      <div class="counters">
+        <div class="counter-item">
+          <h4 class="header-title">Movimientos</h4>
+          <div class="header-num">
+            <span id="mov">00</span>/<span id="mov-total">20</span>
+          </div>
+        </div>
+        <div id="crono" class="counter-item">
+          <h4 class="header-title">Tiempo</h4>
+          <div class="header-num">
+            <span id="minutes">00</span>:<span id="seconds">00</span>
+          </div>
+        </div>
+      </div>
+      <div class="level">
+        <h4 class="header-title">Nivel</h4>
+        <div class="header-num"><span id="level">01</span></div>
+      </div>
+      <button id="control-level" class="control-level">…</button>
+    </header>
+    <main>
+      <div id="mesa" class="mesa"></div>
+      <div id="levelUp" class="sube-level">
+        <div class="modal">
+          <h2>Buena!</h2>
+          <button id="subir">Siguiente nivel</button>
+          <button class="reiniciar">Reiniciar</button>
+        </div>
+      </div>
+      <div id="gameOver" class="game-over">
+        <div class="modal">
+          <h2>Pucha!</h2>
+          <p>Te quedaste sin movimientos</p>
+          <button class="reiniciar">Reiniciar</button>
+        </div>
+      </div>
+      <div id="timeOver" class="game-over">
+        <div class="modal">
+          <h2>Pucha!</h2>
+          <p>Te quedaste sin tiempo</p>
+          <button class="reiniciar">Reiniciar</button>
+        </div>
+      </div>
+      <div id="endGame" class="end-game">
+        <div class="modal">
+          <h2>Crack!</h2>
+          <p>Superaste todos los niveles 🏆</p>
+          <button class="reiniciar">Reiniciar</button>
+        </div>
+      </div>
+    </main>
+    <div class="selecciona-level">
+      <button id="cierra-niveles" class="cierra-niveles">&times;</button>
+      <ul></ul>
+    </div>
+
+    <audio
+      src="sonidos/acierto.mp3"
+      class="sonido"
+      id="sonido-acierto"
+      preload="auto"
+    ></audio>
+    <audio
+      src="sonidos/error.mp3"
+      class="sonido"
+      id="sonido-error"
+      preload="auto"
+    ></audio>
+    <audio
+      src="sonidos/carta.mp3"
+      class="sonido"
+      id="sonido-carta"
+      preload="auto"
+    ></audio>
+
+    <script src="js/global_var.js"></script>
+    <script src="js/find-compare.js"></script>
+    <script src="js/shuffle-draw.js"></script>
+    <script src="js/match-error.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/crono.js"></script>
+    <script src="js/endit.js"></script>
+    <script src="js/level-change.js"></script>
+    <script src="js/game-over.js"></script>
+    <script src="js/levels.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/game-start.js"></script>
+  </body>
+</html>

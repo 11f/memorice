@@ -1,0 +1,19 @@
+:root {
+  --bg: #fafafa;
+  --font: "Noto Sans", sans-serif;
+  --font-display: "Noto Sans", sans-serif;
+  --hotpink: #0e670c;
+  --orange: #168c33;
+  --gradient: linear-gradient(35deg, var(--orange), var(--hotpink));
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  min-height: 100vh;
+  background: var(--bg);
+  font-family: var(--font);
+}
